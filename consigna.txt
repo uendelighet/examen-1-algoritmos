@@ -1,0 +1,59 @@
+Diseñando con Algoritmos | Parcial CheckPoint 1
+WebComponents
+
+Link parcial teorico: https://forms.gle/TL5K8BMze8tZJin87
+
+
+IMPORTANTE: En el teórico se encuentra el apartado para adjuntar el link 
+de su repositorio donde subirá su parcial práctico. Revise con atención que 
+pueda ser visualizado cuando envien el link.
+
+
+Descripción:
+Los estudiantes deberán desarrollar un sistema de gestión de pacientes 
+veterinarios utilizando Web Components, con componentes que interactúen 
+entre sí. El sistema debe tener un componente <patients-board> que contenga 
+el formulario, la lista de pacientes, y la una lista de pacientes pendientes 
+a partir de múltiples componentes <patient-card>. 
+
+
+Guía de la vista
+
+Requisitos:
+Configurar el proyecto utilizando node.js:
+Establecer la configuración del proyecto utilizando node.js.
+Escribir un código limpio, con buen nombramiento de elementos (componentes, 
+variables, clases, etc), algoritmos claros y apropiados.
+Hacer uso correcto del file system:
+
+proyecto/
+├── src/
+│   └── components/
+│   │   └── PatientsBoard/
+│   │   │   ├── PatientsBoard.js
+│   │   │   └── PatientsBoard.css
+│   │   └── PatientCard/
+│   │   │   ├── PatientCard.js
+│   │   │   └── PatientCard.css
+│   │   └── indexPadre.js
+│   └── indexAbuelo.js
+│   └── indexAbuelo.css
+	.
+	.
+	.
+Diseñar y desarrollar componentes reutilizables y modulares utilizando Web Components.
+Implementar el Shadow DOM para encapsular el estilo y proteger el contenido interno de cada tarea.
+
+Componente  <patients-board>: 
+Incluir un formulario que reciba el nombre, especie, raza, fecha de ingreso (input type date) y 
+síntomas del paciente LISTO, para añadir nuevos pacientes y mostrarlos haciendo uso del componente <patient-card LISTO>.
+Debe contener una lista de pacientes pendientes, representada por múltiples <patient-card>.
+Debe contener otra lista del historial de pacientes donde se muestran los atendidos, representada 
+por múltiples <patient-card>.
+
+Componente <patient-card>: 
+Cada paciente debe contener nombre, especie, fecha de ingreso, síntomas del paciente y un estado 
+(pendiente/ atendido), a través de atributos.
+Debe tener un input checkbox para cambiar el estado del paciente de pendiente a atendido. 
+Al pasar de pendiente a atendido debe dejarse de mostrar en la lista de pendientes y sólo 
+estar en el historial de pacientes.
